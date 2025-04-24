@@ -5,4 +5,9 @@ time = "25 квітня о 15:00"
 smile1 = "💅"
 smile2 = "❤"
 sms = f"Шановна {name}, ми Вас очікуємо на {service} {smile1}. \nАдреса:{address}. \nДата: {time}. \nДо зустрічі! {smile2}"
-print(sms)
+
+import templates_practice
+
+sms2 = templates_practice.SMS_WARNING_MSG.format(name=name, service=service, time=time)
+print(f"{sms2}")
+pass

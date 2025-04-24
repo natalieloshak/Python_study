@@ -9,5 +9,4 @@ sms = f"Шановна {name}, ми Вас очікуємо на {service} {smil
 import templates_practice
 
 sms2 = templates_practice.SMS_WARNING_MSG.format(name=name, service=service, time=time)
-print(f"{sms2}")
 pass

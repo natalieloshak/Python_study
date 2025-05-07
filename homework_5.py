@@ -8,7 +8,7 @@ def split_list(lst):
         return [lst[: mid + 1], lst[mid + 1 :]]
 
 
-# перевірка
+# перевірка коду
 print(split_list([1]))
 print(split_list([]))
 print(split_list([1, 2, 3, 4, 5, 6]))

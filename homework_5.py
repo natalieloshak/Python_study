@@ -1,16 +1,29 @@
-def split_list(lst):
-    if len(lst) == 0:
-        return [[], []]
-    mid = len(lst) // 2
-    if len(lst) % 2 == 0:
-        return [lst[:mid], lst[mid:]]
-    else:
-        return [lst[: mid + 1], lst[mid + 1 :]]
+import string
+import keyword
 
 
-# перевірка коду
-print(split_list([1]))
-print(split_list([]))
-print(split_list([1, 2, 3, 4, 5, 6]))
-print(split_list([1, 2, 3]))
-print(split_list([1, 2, 3, 4, 5]))
+def is_valid_variable_name(name):
+    if not name:
+        return False
+
+    if name in keyword.kwlist:
+        return False
+
+    if name[0].isdigit():
+        return False
+
+    if any(char.isupper() for char in name):
+        return False
+
+    allowed_chars = string.ascii_lowercase + string.digits + "_"
+    if any(char not in allowed_chars for char in name):
+        return False
+
+    if set(name) == {"_"}:
+        return len(name) == 1
+
+    return True
+
+
+user_input = input()
+print(is_valid_variable_name(user_input))

@@ -24,7 +24,7 @@ class Group:
 
     def __init__(self, number):
         self.number = number
-        self.group = []  # список студентів
+        self.group = []
 
     def add_student(self, student):
         for s in self.group:
@@ -49,7 +49,6 @@ class Group:
         return f"Group Number: {self.number}\n{all_students}"
 
 
-# Приклад використання
 st1 = Student("Male", 30, "Steve", "Jobs", "AN142")
 st2 = Student("Female", 25, "Liza", "Taylor", "AN145")
 gr = Group("PD1")
